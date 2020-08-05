@@ -1,0 +1,3 @@
+---
+# CSR-1 specific connectivity variables.
+ansible_user: "admin2"

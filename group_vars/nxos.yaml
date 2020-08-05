@@ -1,0 +1,3 @@
+---
+# Default Connectivity Variables for [NXOS] group only
+ansible_network_os: "nxos"

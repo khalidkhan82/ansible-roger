@@ -1,0 +1,36 @@
+---
+
+## First Play - Grab the date time from Ansible localhost and create directory based on current date
+
+- hosts: CSR_Routers
+
+  tasks:
+    - name: "Get Data/time Fact of the Ansible Localhost"
+      setup:
+        filter: "ansible_date_time"
+        gather_subset: "!all"
+
+    - name: "Store Date time Fact as a variable DTG"
+      set_fact:
+        DTG: "{{ansible_data_time.date}}}"
+
+    - name: "Create directory {{hostvars.localhost.DTG}}"
+      file:
+        path: ~/ansible-roger/backups/{{hotsvars.localhost.DTG}}
+        state: directory
+  run_once: true
+
+## Second Play - backs up the CSR routers
+
+- hosts: CSR_Routers
+
+  tasks:
+    - name: "Backup config"
+      ios_command:
+        commands: show run
+      register: config
+
+    - name: "Save output to ./ansible-roger/backups/hotsvars.localhost.DTG"
+      copy:
+        content: "{{ config.stdout[0]}}"
+        dest: "~/ansible-roger/backups/{{hotsvars.localhost.DTG}}/{{inventory_hostname}}-{{hotsvars.localhost.DTG}}-backup.txt"

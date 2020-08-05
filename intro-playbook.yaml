@@ -1,0 +1,18 @@
+---
+
+## First Play - uses 'ios_command' module to show ios version running on the hosts
+
+- hosts: CSR_Routers
+
+  tasks:
+    - name: "Show Version"
+      ios_command:
+        commands: show version
+      register: version
+    debug:
+      message: ""{{version}}"
+
+    - name: "Save output to a file in ./ansible-roger/
+      copy:
+        content: "{{ version.stdout[0]}}"
+        dest: "~/ansible-roger/{{inventory_hostname}}-verion.txt"

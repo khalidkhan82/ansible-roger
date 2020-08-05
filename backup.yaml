@@ -1,0 +1,16 @@
+---
+
+## First Play - backs up the CSR routers
+
+- hosts: CSR_Routers
+
+  tasks:
+    - name: "Backup config"
+      ios_command:
+        commands: show run
+      register: config
+
+    - name: "Save output to a file in ./ansible-roger/backups"
+      copy:
+        content: "{{ config.stdout[0]}}"
+        dest: "~/ansible-roger/backups/{{inventory_hostname}}-backup.txt"

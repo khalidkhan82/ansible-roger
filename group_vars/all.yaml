@@ -1,0 +1,9 @@
+
+---
+# Default Connectivity Variables used by any/all groups, overridden only by the group specific variables.
+
+ansible_user: "admin"
+ansible_ssh_pass: "cisco"
+ansible_network_os: "ios"
+ansible_connection: "network_cli"
+
