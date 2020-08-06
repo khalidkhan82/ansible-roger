@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="68da2cf9-a190-4a28-b297-16fa5ed1373e" name="Default Changelist" comment="testing fetch">
+      <change beforePath="$PROJECT_DIR$/intro-playbook.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/intro-playbook.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1fUvya5SWKVgxYatSAYX2psJukk" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TF_FMT" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Khalid\IdeaProjects\ansible-roger" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Khalid\IdeaProjects\ansible-roger" />
+      <recent name="C:\Users\Khalid\IdeaProjects\ansible-roger\.idea" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="adding Ansible host file for CSR routers" />
+    <MESSAGE value="adding intro-playbook.yaml and backup.yaml and backup2.yaml" />
+    <MESSAGE value="testing fetch" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing fetch" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="718" y="319" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596406025169">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="718" y="319" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050/1920.0.1600.1170@0.0.1920.1050" timestamp="1596406025169" />
+    <state x="461" y="169" key="SettingsEditor" timestamp="1596457986969">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="461" y="169" key="SettingsEditor/0.0.1920.1050/1920.0.1600.1170@0.0.1920.1050" timestamp="1596457986969" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1596724095735">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1600.1170@0.0.1920.1050" timestamp="1596724095735" />
+  </component>
+</project>
