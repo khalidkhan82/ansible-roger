@@ -10,7 +10,7 @@
         commands: show version
       register: version
     - debug:
-        var: version
+        var: version.stdout[0]
 
     - name: "Save output to a file in ./ansible-roger/"
       copy:
