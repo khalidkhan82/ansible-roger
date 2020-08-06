@@ -14,5 +14,5 @@
 
     - name: "Save output to a file in ./ansible-roger/
       copy:
-        content: "{{ version.stdout[0]}}"
+        content: "{{version.stdout[0]}}"
         dest: "~/ansible-roger/{{inventory_hostname}}-verion.txt"
