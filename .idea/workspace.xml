@@ -10,7 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68da2cf9-a190-4a28-b297-16fa5ed1373e" name="Default Changelist" comment="testing fetch">
+    <list default="true" id="68da2cf9-a190-4a28-b297-16fa5ed1373e" name="Default Changelist" comment="Corrected intro-playbook.yaml">
       <change beforePath="$PROJECT_DIR$/intro-playbook.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/intro-playbook.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +65,8 @@
     <MESSAGE value="adding Ansible host file for CSR routers" />
     <MESSAGE value="adding intro-playbook.yaml and backup.yaml and backup2.yaml" />
     <MESSAGE value="testing fetch" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing fetch" />
+    <MESSAGE value="Corrected intro-playbook.yaml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrected intro-playbook.yaml" />
   </component>
   <component name="WindowStateProjectService">
     <state x="718" y="319" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596406025169">
@@ -76,9 +77,9 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="169" key="SettingsEditor/0.0.1920.1050/1920.0.1600.1170@0.0.1920.1050" timestamp="1596457986969" />
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1596724095735">
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1596724408468">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1600.1170@0.0.1920.1050" timestamp="1596724095735" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1600.1170@0.0.1920.1050" timestamp="1596724408468" />
   </component>
 </project>
