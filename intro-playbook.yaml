@@ -9,8 +9,8 @@
       ios_command:
         commands: show version
       register: version
-    debug:
-      message: ""{{version}}"
+    - debug:
+        message: ""{{version}}"
 
     - name: "Save output to a file in ./ansible-roger/
       copy:
