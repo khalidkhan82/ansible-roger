@@ -16,7 +16,7 @@
 
     - name: "Create directory {{hostvars.localhost.DTG}}"
       file:
-        path: ~/ansible-roger/backups/{{hotsvars.localhost.DTG}}
+        path: ~/home/backups/cisco/{{hotsvars.localhost.DTG}}
         state: directory
   run_once: true
 
@@ -33,4 +33,4 @@
     - name: "Save output to ./ansible-roger/backups/hotsvars.localhost.DTG"
       copy:
         content: "{{ config.stdout[0]}}"
-        dest: "~/ansible-roger/backups/{{hotsvars.localhost.DTG}}/{{inventory_hostname}}-{{hotsvars.localhost.DTG}}-backup.txt"
+        dest: "~/home/backups/cisco/{{hotsvars.localhost.DTG}}/{{inventory_hostname}}-{{hotsvars.localhost.DTG}}-backup.txt"
