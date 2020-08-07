@@ -14,7 +14,7 @@
       set_fact:
         DTG: "{{ansible_date_time.date}}"
 
-    - name: Create directory {{hostvars.localhost.DTG}}
+    - name: "Create directory {{hostvars.localhost.DTG}}"
       file:
         path: ~/home/backups/cisco/{{hotsvars.localhost.DTG}}
         state: directory
