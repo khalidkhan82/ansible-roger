@@ -16,7 +16,7 @@
 
     - name: "Create directory {{hostvars.localhost.DTG}}"
       file:
-        path: ~/home/backups/cisco/{{hotsvars.localhost.DTG}}
+        path: ~/home/backups/cisco/{{hostvars.localhost.DTG}}
         state: directory
   run_once: true
 
