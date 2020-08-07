@@ -2,7 +2,7 @@
 
 ## First Play - Grab the date time from Ansible localhost and create directory based on current date
 
-- hosts: CSR_Routers
+- hosts: localhost
 
   tasks:
     - name: "Get Data/time Fact of the Ansible Localhost"
