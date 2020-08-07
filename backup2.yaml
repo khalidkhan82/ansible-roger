@@ -12,7 +12,7 @@
 
     - name: "Store Date time Fact as a variable DTG"
       set_fact:
-        DTG: "{{ansible_data_time.date}}"
+        DTG: "{{ansible_date_time.date}}"
 
     - name: "Create directory {{hostvars.localhost.DTG}}"
       file:
