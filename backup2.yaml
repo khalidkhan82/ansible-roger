@@ -27,7 +27,7 @@
   tasks:
     - name: "Backup config"
       ios_command:
-        commands: show run
+        commands: show running-config
       register: config
 
     - name: "Save output to ./ansible-roger/backups/hotsvars.localhost.DTG"
