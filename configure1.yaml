@@ -3,6 +3,7 @@
 ## Play 1 - config changes on CSR using the 'lines' and the text file options
 
 - hosts: CSR_Routers
+  become: yes
 
   tasks:
     - name: "configure a single command"
