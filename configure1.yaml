@@ -12,7 +12,7 @@
 
     - name: "configure multiple lines of code from a configuration text file"
       ios_config:
-        src: "~/home/ansibel-roger/configs/config1.txt"
+        src: "~/home/ansible-roger/configs/config1.txt"
 
     - name: "Save the config using the Always option for 'save_when'"
       ios_config:
