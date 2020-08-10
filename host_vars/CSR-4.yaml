@@ -1,7 +1,6 @@
 ---
 
-
 hostname:
   name: CSR-Four
 
-
+hostnumber:4

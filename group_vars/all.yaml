@@ -14,3 +14,8 @@ ntp:
 
 domain_name: ansible-local
 
+interfaces:
+  interface1: GigabitEthernet1
+  interface2: GigabitEthernet2
+  interface3: GigabitEthernet3
+  interface4: GigabitEthernet4
