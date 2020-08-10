@@ -1,0 +1,18 @@
+---
+
+## Play 1 - config changes on CSR using the 'lines' and the text file options
+
+- hosts: CSR_Routers
+
+  tasks:
+    - name: "configure a single command"
+      ios_config:
+        lines: ntp server 9.9.9.9
+
+    - name: "configure multiple lines of code from a configuration text file"
+      ios_config:
+        src: "~/ansibel-roger/configs/config1.txt"
+
+    - name: "Save the config using the Always option for 'save_when'"
+      ios_config:
+        save_when: always

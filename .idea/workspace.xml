@@ -11,7 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68da2cf9-a190-4a28-b297-16fa5ed1373e" name="Default Changelist" comment="Corrected intro-playbook.yaml">
-      <change beforePath="$PROJECT_DIR$/backup2.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/backup2.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configs/config1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configure1.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ansible.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/ansible.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-fetch.ini" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +39,10 @@
     <property name="TF_FMT" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -69,17 +76,29 @@
     <option name="LAST_COMMIT_MESSAGE" value="Corrected intro-playbook.yaml" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="440" y="99" key="#Project_Structure" timestamp="1596849178755">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="440" y="99" key="#Project_Structure/0.0.1920.1050/1920.0.1600.1170@0.0.1920.1050" timestamp="1596849178755" />
     <state x="718" y="319" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596406025169">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="718" y="319" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050/1920.0.1600.1170@0.0.1920.1050" timestamp="1596406025169" />
-    <state x="461" y="169" key="SettingsEditor" timestamp="1596457986969">
+    <state x="781" y="160" key="#com.intellij.ide.ui.customization.CustomizableActionsPanel.FindAvailableActionsDialog" timestamp="1596849046274">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="461" y="169" key="SettingsEditor/0.0.1920.1050/1920.0.1600.1170@0.0.1920.1050" timestamp="1596457986969" />
+    <state x="781" y="160" key="#com.intellij.ide.ui.customization.CustomizableActionsPanel.FindAvailableActionsDialog/0.0.1920.1050/1920.0.1600.1170@0.0.1920.1050" timestamp="1596849046274" />
+    <state x="461" y="169" key="SettingsEditor" timestamp="1596849164020">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="461" y="169" key="SettingsEditor/0.0.1920.1050/1920.0.1600.1170@0.0.1920.1050" timestamp="1596849164020" />
     <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1596754208050">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1600.1170@0.0.1920.1050" timestamp="1596754208050" />
+    <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1596849105027">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1050/1920.0.1600.1170@0.0.1920.1050" timestamp="1596849105027" />
   </component>
 </project>
