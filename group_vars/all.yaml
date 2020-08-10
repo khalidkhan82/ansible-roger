@@ -11,6 +11,6 @@ ansible_become_password: "cisco"
 
 ntp:
   server1: 10.10.10.10
-   
-domain-name: ansible-local
+
+domain_name: ansible-local
 
