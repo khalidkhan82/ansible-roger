@@ -3,6 +3,6 @@
 ansible_user: "admin2"
 
 hostname:
-  name: CSR-Two
+  name: CSR-One
 
 
