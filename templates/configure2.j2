@@ -3,6 +3,7 @@
 
 ## Global config - base config consistent across all hosts
 ntp server {{ ntp.server1 }}
+ip domain name {{ domain-name }}
 
 ## Host specific config
 hostname {{ hostname.name }}
