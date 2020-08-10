@@ -1,5 +1,4 @@
 ---
-
 ## Play 1 - this play configure Layer 3 interfaces on the CSR-Routers
 
 - hosts: CSR-Routers
@@ -8,10 +7,10 @@
     - name: 'Task 1 - configure interfaces settings'
       ios_interfaces:
         config:
-          - name       : {{ interfaces.interface1 }}
+          - name       : "{{ interfaces.interface1 }}"
             description: "Data"
             enabled    : True
-          - name       : {{ interfaces.interface2 }}
+          - name       : "{{ interfaces.interface2 }}"
             description: "Mgmt"
             mtu        : 2800
             enabled    : False
@@ -20,8 +19,7 @@
     - name: 'Task2: Configure layer 3 interfaces'
       ios_l3_interfaces:
         config:
-          - name       : {{ interfaces.interface2 }}
+          - name       : "{{ interfaces.interface2 }}"
             ipv4:
-            - address: 10.10.1.{{ hostname.hostnumber }}
+            - address: 10.10.1."{{ hostname.hostnumber }}"
 
-      
