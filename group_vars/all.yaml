@@ -15,7 +15,7 @@ ntp:
 domain_name: ansible-local
 
 
-l2_interfaces:
+interfaces:
   CSR-1:
     - name: GigabitEthernet1
       description: to_CSR-2_Gig1
