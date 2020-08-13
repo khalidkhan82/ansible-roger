@@ -3,13 +3,18 @@
 
 - hosts: CSR-1
 
+  var:
+    - name: GigabitEthernet1
+    - description: to_CSR-2_Gig1
+    - ip: 10.0.12.1
+    - mask: 255.255.255.0
   tasks:
     - name: "Task 1 configure interfaces settings"
       ios_config:
         lines:
-          - description "{{ interfaces.description }}"
-          - ip address "{{ interfaces.ip }}"
-        parents: "{{ interfaces.name }}"
+          - description "{{ description }}"
+          - ip address "{{ ip }}" "{{ mask }}"
+        parents: "{{ name }}"
 
 
 
