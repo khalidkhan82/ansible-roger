@@ -18,12 +18,12 @@ domain_name: ansible-local
 interfaces:
   CSR-1:
     - name: GigabitEthernet1
-      description: to_CSR-2_Gig1
-      ip: 10.0.12.1
+    - description: to_CSR-2_Gig1
+    - ip: 10.0.12.1
 
   CSR-2:
     - name: GigabitEthernet1
-      description: to_CSR-1_Gig1
-      ip: 10.0.12.2
+    - description: to_CSR-1_Gig1
+    - ip: 10.0.12.2
 
 
