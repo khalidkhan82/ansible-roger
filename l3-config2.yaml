@@ -1,7 +1,7 @@
 ---
 ## Play 1 - this play configure Layer 3 interfaces on the CSR-Routers
 
-- hosts: CSR-Routers
+- hosts: CSR_Routers
 
   var:
     - name: GigabitEthernet1
