@@ -7,9 +7,9 @@
     - name: "Task 1 configure interfaces settings"
       ios_config:
         lines:
-          - description "{{ hostvars[hostname][interfaces.description] }}"
-          - ip address "{{ hostvars[hostname][interfaces.ip] }}"
-        parents: "{{ hostvars[hostname][interfaces.name] }}"
+          - description "{{ hostvars[CSR-1][interfaces.description] }}"
+          - ip address "{{ hostvars[CSR-1][interfaces.ip] }}"
+        parents: "{{ hostvars[CSR-1][interfaces.name] }}"
 
 
 
