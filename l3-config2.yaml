@@ -4,7 +4,7 @@
 - hosts: CSR-1
 
   tasks:
-    - name: "Task 1 - configure interfaces settings"
+    - name: "Task 1 configure interfaces settings"
       ios_config:
         lines:
           - description "{{ hostvars[hostname][interfaces.description] }}"
