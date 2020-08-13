@@ -8,13 +8,13 @@
     - description: to_CSR-2_Gig1
     - ip: 10.0.12.1
     - mask: 255.255.255.0
+    - vlan200: 200
+
   tasks:
     - name: "Task 1 configure interfaces settings"
       ios_config:
         lines:
-          - description "{{ description }}"
-          - ip address "{{ ip }}" "{{ mask }}"
-        parents: "{{ name }}"
+          - vlan "{{ vlan200 }}
 
 
 
