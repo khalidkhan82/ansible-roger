@@ -7,9 +7,9 @@
     - name: "Task 1 configure interfaces settings"
       ios_config:
         lines:
-          - description "{{ interfaces.description] }}"
-          - ip address "{{ interfaces.ip] }}"
-        parents: "{{ interfaces.name] }}"
+          - description "{{ interfaces.description }}"
+          - ip address "{{ interfaces.ip }}"
+        parents: "{{ interfaces.name }}"
 
 
 
