@@ -2,7 +2,7 @@
 ## Play 1 - this play configure Layer 3 interfaces on the CSR-Routers
 
 - hosts: CSR_Routers
-  var:
+  vars:
     - name: GigabitEthernet1
     - description: to_CSR-2_Gig1
     - ip: 10.0.12.1
