@@ -2,7 +2,7 @@
 
 [CSR_Routers]
 
-CSR-1 ansible_host=192.168.1.11
+CSR_1 ansible_host=192.168.1.11
 CSR-2 ansible_host=192.168.1.12
 CSR-3 ansible_host=192.168.1.13
 CSR-4 ansible_host=192.168.1.14
