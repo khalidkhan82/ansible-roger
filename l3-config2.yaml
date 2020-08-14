@@ -14,8 +14,4 @@
     - name: "Task 1 configure interfaces settings"
       ios_config:
         lines:
-          - vlan "{{ vlan200 }}
-
-
-
-
+          - vlan "{{ vlan200 }}"
