@@ -4,7 +4,7 @@
 - hosts: CSR_Routers
   become: yes
   vars:
-    vlan200: 200
+    vlan200: "200"
 
   tasks:
     - name: "Task 1 configure interfaces settings"
