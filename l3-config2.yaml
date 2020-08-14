@@ -4,11 +4,7 @@
 - hosts: CSR_Routers
   become: yes
   vars:
-    - name: GigabitEthernet1
-    - description: to_CSR-2_Gig1
-    - ip: 10.0.12.1
-    - mask: 255.255.255.0
-    - vlan200: 200
+    vlan200: 200
 
   tasks:
     - name: "Task 1 configure interfaces settings"
