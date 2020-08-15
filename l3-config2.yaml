@@ -3,7 +3,7 @@
 
 - hosts: CSR_Routers
   become: yes
-  become_password: "cisco"
+
 
   vars:
     vlan200: "200"
