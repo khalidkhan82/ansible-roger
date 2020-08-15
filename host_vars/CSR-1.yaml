@@ -1,6 +1,7 @@
 ---
 # CSR-1 specific connectivity variables.
 ansible_user: "admin2"
+ansible_become_password: "cisco"
 
 hostname:
   name: CSR-One
