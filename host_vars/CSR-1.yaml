@@ -4,15 +4,13 @@ ansible_user: "admin2"
 ansible_become: yes
 ansible_become_password: "cisco"
 
-hostname:
-  name: CSR-One
 
 hostnumber: 1
 
-interfaces:
-  - name: GigabitEthernet1
-    description: to_CSR-2_Gig1
-    ip: 10.0.12.1
-    mask: 255.255.255.0
+
+name: GigabitEthernet1
+description: to_CSR-2_Gig1
+ip: 10.0.12.1
+mask: 255.255.255.0
 
 
