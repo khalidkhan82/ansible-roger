@@ -4,12 +4,15 @@
 - hosts: CSR_Routers
   become: yes
 
-
   vars:
-    vlan200: "200"
+    interface: GigabitEthernet1
+    ip: 10.100.100.1
+    mask : 255.255.255.0
+
 
   tasks:
     - name: "Task 1 configure interfaces settings"
       ios_config:
         lines:
-          - hostname CSR-11
+          - ip address {{ ip }} mask {{ mask }}
+        parents: "{{ interface }}"
