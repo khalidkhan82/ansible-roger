@@ -11,7 +11,7 @@ hostnumber: 1
 interface:
   - name: GigabitEthernet1
     description: to_CSR-2_Gig1
-    ip: 10.0.12.1
+    ip: 10.100.10.1
     mask: 255.255.255.0
 
 
