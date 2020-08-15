@@ -8,5 +8,5 @@
     - name: "Task 1 configure interfaces settings"
       ios_config:
         lines:
-          - ip address {{ interfaces.ip }} {{ interfaces.mask }}
-        parents: interface {{ interfaces.name }}
+          - ip address {{ interfaces.GigabitEthernet1.ip }} {{ interfaces.GigabitEthernet1.mask }}
+        parents: interface {{ interfaces.GigabitEthernet1.name }}
