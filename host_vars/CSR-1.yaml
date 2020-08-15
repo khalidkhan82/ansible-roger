@@ -8,7 +8,7 @@ ansible_become_password: "cisco"
 hostnumber: 1
 
 
-interface:
+interfaces:
   - name: GigabitEthernet1
     description: to_CSR-2_Gig1
     ip: 10.100.10.1
