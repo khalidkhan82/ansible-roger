@@ -9,6 +9,6 @@ CSR-4 ansible_host=192.168.1.14
 
 [NXOS]
 NXOS-1 ansible_host=192.168.1.21
-NXOS-1 ansible_host=192.168.1.22
+NXOS-2 ansible_host=192.168.1.22
 
 [Juniper]
