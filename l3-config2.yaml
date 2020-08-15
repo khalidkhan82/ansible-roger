@@ -6,7 +6,7 @@
 
   vars:
     interface:
-    ip: 10.100.100.1
+    ip: 10.100.100.11
     mask: 255.255.255.0
 
 
@@ -15,4 +15,4 @@
       ios_config:
         lines:
           - ip address {{ ip }} {{ mask }}
-        parents: GigabitEthernet1
+        parents: interface GigabitEthernet1
