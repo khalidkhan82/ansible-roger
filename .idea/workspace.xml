@@ -6,11 +6,21 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68da2cf9-a190-4a28-b297-16fa5ed1373e" name="Default Changelist" comment="created configure1.yaml, config1.txt and configs directory">
+      <change afterPath="$PROJECT_DIR$/nxos-config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,10 +89,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="440" y="99" key="#Project_Structure/0.0.1920.1050/1920.0.1600.1170@0.0.1920.1050" timestamp="1596849178755" />
-    <state x="718" y="319" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597097308588">
+    <state x="718" y="319" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597494484940">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="718" y="319" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050/1920.0.1600.1170@0.0.1920.1050" timestamp="1597097308588" />
+    <state x="718" y="319" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050/1920.0.1600.1170@0.0.1920.1050" timestamp="1597494484940" />
     <state x="781" y="160" key="#com.intellij.ide.ui.customization.CustomizableActionsPanel.FindAvailableActionsDialog" timestamp="1596849046274">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

@@ -1,0 +1,19 @@
+---
+## Play 1 - this play configure Layer 3 interfaces on the CSR-Routers
+
+- hosts: CSR_Routers
+  become: yes
+
+  vars:
+    interface:
+    ip: 10.100.100.1
+    mask: 255.255.255.0
+
+
+  tasks:
+    - name: "Task 1 configure interfaces settings"
+      nxos_config:
+        lines:
+          - ip address {{ ip }} {{ mask }}
+        parents: Ethernet1/1
+        save_when: modified
