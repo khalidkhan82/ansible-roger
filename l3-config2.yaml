@@ -8,7 +8,8 @@
   tasks:          # this task was successful using the loop
     - name: "Task 1 configure interfaces settings"
       ios_config:
+        parents: interface {{ item.name }}
         lines:
           - ip address {{ item.ip }} {{ item.mask }}
-        parents: interface {{ item.name }}
+
       loop: "{{ interfaces }}" #list needs to be looped over

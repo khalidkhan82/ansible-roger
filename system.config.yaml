@@ -1,0 +1,12 @@
+---
+
+- name: "Play - configure basic system settings such as hostname, domain, NTP etc."
+  hosts: CSR_Routers
+
+  tasks:
+    - name: "Configure hostname, domain"
+      ios_system:
+        hostname: "{{ inventory_hostname }}"
+        domain_name: "{{ domain_name }}"
+        name_servers: "{{ name_servers.server1 }}"
+        lookup_enabled: no
