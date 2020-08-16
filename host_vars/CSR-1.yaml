@@ -15,7 +15,7 @@ interfaces:
     mask: 255.255.255.0
 
   - name: GigabitEthernet2
-   description: to_CSR-3_Gig1
+    description: to_CSR-3_Gig1
     ip: 10.60.60.1
     mask: 255.255.255.0
 
