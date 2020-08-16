@@ -20,7 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68da2cf9-a190-4a28-b297-16fa5ed1373e" name="Default Changelist" comment="created configure1.yaml, config1.txt and configs directory">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/group_vars/all.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/group_vars/all.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/system-config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/system-config.yaml" afterDir="false" />
     </list>
