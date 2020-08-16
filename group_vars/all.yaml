@@ -10,8 +10,8 @@ ansibe_become: yes
 ansible_become_password: "cisco"
 
 ntp_server:
-  - 11.11.11.11
-  - 12.12.12.12
+  server1: 11.11.11.11
+  server2: 12.12.12.12
 
 domain_name: ansible.local
 name_servers:
