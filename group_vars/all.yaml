@@ -14,8 +14,11 @@ ntp:
 
 domain_name: ansible.local
 name_servers:
-  server1: 8.8.8.8
-  server2: 9.9.9.9
+  #server1: 8.8.8.8
+  #server2: 9.9.9.9
+  - 8.8.8.8
+  - 9.9.9.9
+  - 10.10.10.10
 
 #interfaces:
  # CSR-1:
