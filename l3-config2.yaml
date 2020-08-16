@@ -1,10 +1,11 @@
 ---
-## Play 1 - this play configure Layer 3 interfaces on the CSR-Routers
+
+# Play 1 - this play configure Layer 3 interfaces on the CSR-Routers
 
 - hosts: CSR_Routers
   become: yes
 
-  tasks:
+  tasks:          # this task was successful using the loop
     - name: "Task 1 configure interfaces settings"
       ios_config:
         lines:
