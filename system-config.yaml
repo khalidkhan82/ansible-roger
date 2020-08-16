@@ -5,10 +5,17 @@
   become: yes
 
   tasks:
-    - name: "Task 1 - Configure hostname, domain"
+    - name: "Task 1 - configure hostname, domain"
       ios_system:
         hostname: "{{ inventory_hostname }}"
         domain_name: "{{ domain_name }}"
         name_servers: "{{ name_servers }}"
-          #- "{{ name_servers.server1 }}"
-          #- "{{ name_servers.server2 }}"
+        # - "{{ name_servers.server1 }}"
+        # - "{{ name_servers.server2 }}"
+
+    - name: "Task 2 - configure NTP server"
+      ios_ntp:
+        server: "{{ ntp_server }}"
+        auth: no
+        logging: true
+        state: present
