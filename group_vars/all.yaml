@@ -9,9 +9,7 @@ ansible_connection: "network_cli"
 ansibe_become: yes
 ansible_become_password: "cisco"
 
-ntp_server:
-  server1: 11.11.11.11
-  server2: 12.12.12.12
+ntp_server: 1.1.1.1
 
 domain_name: ansible.local
 name_servers:
