@@ -14,18 +14,20 @@ ntp:
 
 domain_name: ansible.local
 name_servers:
-  server1: 8.8.8.8
-  server2: 9.9.9.9
+  - name: server1
+    ip: 8.8.8.8
+  - name: server2
+    ip: 9.9.9.9
 
-interfaces:
-  CSR-1:
-    - name: GigabitEthernet1
-    - description: to_CSR-2_Gig1
-    - ip: 10.0.12.1
+#interfaces:
+ # CSR-1:
+ #   - name: GigabitEthernet1
+ #   - description: to_CSR-2_Gig1
+  #  - ip: 10.0.12.1
 
-  CSR-2:
-    - name: GigabitEthernet1
-    - description: to_CSR-1_Gig1
-    - ip: 10.0.12.2
+ # CSR-2:
+ #   - name: GigabitEthernet1
+  #  - description: to_CSR-1_Gig1
+  #  - ip: 10.0.12.2
 
 
