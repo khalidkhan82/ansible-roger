@@ -15,7 +15,7 @@
 
     - name: "Task 2 - configure NTP server"
       ios_ntp:
-        server: "{{ ntp_server.server }}"
+        server: "{{ ntp_server }}"
         auth: no
         logging: true
         state: present
