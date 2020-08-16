@@ -11,4 +11,4 @@
         lines:
           - ip address {{ item.ip }} {{ item.mask }}
         parents: interface {{ item.name }}
-      loop: "{{ interfaces }}"
+      loop: "{{ interfaces }}" #list needs to be looped over
