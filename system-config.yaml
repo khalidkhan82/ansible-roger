@@ -12,5 +12,3 @@
         name_servers:
           - "{{ name_servers.server1 }}"
           - "{{ name_servers.server2 }}"
-
-"
