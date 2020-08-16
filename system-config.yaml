@@ -2,7 +2,7 @@
 
 - name: "Play - configure basic system settings such as hostname, domain, NTP etc."
   hosts: CSR_Routers
-  ansible_become: yes
+  become: yes
 
   tasks:
     - name: "Task 1 - Configure hostname, domain"
