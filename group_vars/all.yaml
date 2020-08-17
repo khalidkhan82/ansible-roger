@@ -20,19 +20,14 @@ name_servers:
   - 10.10.10.10
 
 interfaces:
- # CSR-1:
- #   - name: GigabitEthernet1
- #   - description: to_CSR-2_Gig1
-  #  - ip: 10.0.12.1
-
  CSR-2:
-  - name: GigabitEthernet1
+   - name: GigabitEthernet1
     description: to_CSR-1_Gig1
 
-  - name: GigabitEthernet2
+   - name: GigabitEthernet2
     description: to_CSR-3_Gig1
 
-  - name: GigabitEthernet3
+   - name: GigabitEthernet3
     description: to_CSR-4_Gig1
 
 
