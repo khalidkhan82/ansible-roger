@@ -19,4 +19,4 @@
         parents: interface {{ item.name }}
         lines  :
           - description {{ item.description }}
-        loop   : "{{ interfaces[inventory_hostname }}" #list needs to be looped over
+        loop   : "{{ interfaces[inventory_hostname] }}" #list needs to be looped over
