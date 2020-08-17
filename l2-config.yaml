@@ -15,8 +15,7 @@
       loop: "{{ interfaces }}" #list needs to be looped over
 
     - name: "Task 2 - configure interface parameters on CSR-2"
-      ios_config:
-        parents: interface {{ item.name }}
-        lines  :
-          - description {{ item.description }}
+      ios_interfaces:
+        name: "{{ item.name }}"
+        description: "{{ item.description }}"
       loop: "{{ interfaces[inventory_hostname] }}" #list needs to be looped over
