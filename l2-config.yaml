@@ -1,0 +1,22 @@
+---
+
+# Play 1 - this play configure Layer 2 interfaces parameters such as
+#description, MTU, state etc. on the CSR-Routers
+
+- hosts: CSR_Routers
+  become: yes
+
+  tasks:          # this task was successful using the loop
+    - name: "Task 1 configure interfaces parameters on CSR-1"
+      ios_config:
+        parents: interface {{ item.name }}
+        lines:
+          - description {{ item.description }}
+      loop: "{{ interfaces }}" #list needs to be looped over
+
+    - name: "Task 2 - configure interface parameters on CSR-2"
+      ios_config:
+        parents: interface {{ item.name }}
+        lines  :
+          - description {{ item.description }}
+        loop   : "{{ interfaces[inventory_hostname }}" #list needs to be looped over
