@@ -20,7 +20,7 @@ name_servers:
   - 10.10.10.10
 
 interfaces:
- - CSR-2:
+ CSR-2:
   - name: GigabitEthernet1
     description: to_CSR-1_Gig1
 
