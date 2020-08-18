@@ -18,4 +18,4 @@
       ios_interfaces:
         name: "{{ item.name }}"
         description: "{{ item.description }}"
-      loop: "{{ interfaces[inventory_hostname] }}" #list needs to be looped over
+      loop: "{{ interfaces[hostname] }}" #list needs to be looped over
