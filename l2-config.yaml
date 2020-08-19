@@ -18,4 +18,4 @@
       ios_interfaces:
         name: "{{ item.name }}"
         description: "{{ item.description }}"
-      with_dict: "{{ interfaces }}
+      with_dict: "{{ interfaces }}"
