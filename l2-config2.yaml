@@ -10,6 +10,6 @@
     - name: "Task 2 - configure interface parameters on CSR-2"
       ios_interfaces:
         config:
-          name: "{{ item.name }}"
-          description: "{{ item.description }}"
+          - name: "{{ item.name }}"
+            description: "{{ item.description }}"
       loop: "{{ interfaces[inventory_hostname] }}"
