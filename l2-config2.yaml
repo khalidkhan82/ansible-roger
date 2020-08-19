@@ -11,4 +11,4 @@
       ios_interfaces:
         name: "{{ item.name }}"
         description: "{{ item.description }}"
-      with_dict: "{{ interfaces }}"
+      loop: "{{ interfaces[hostname] }}"

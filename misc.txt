@@ -1,3 +1,4 @@
       #with_items: "{{ interfaces[hostname] }}" #list needs to be looped over
       #loop: "{{ interfaces[query('inventory_hostnames'), 'all'] }}"
       #loop: "{{ lookup('dict', interfaces) }}"
+      with_dict: "{{ interfaces }}"
