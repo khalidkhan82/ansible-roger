@@ -18,4 +18,5 @@
       ios_interfaces:
         name: "{{ item.name }}"
         description: "{{ item.description }}"
-      with_items: "{{ interfaces[hostname] }}" #list needs to be looped over
+      #with_items: "{{ interfaces[hostname] }}" #list needs to be looped over
+      loop: "{{ query(interfaces['inventory_hostnames'], 'all') }}"
