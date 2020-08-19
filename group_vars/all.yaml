@@ -27,5 +27,11 @@ interfaces:
     description: to_CSR-3_Gig1
   - name: GigabitEthernet3
     description: to_CSR-4_Gig1
-
+ CSR-3:
+   - name: GigabitEthernet1
+     description: to_CSR-1_Gig1
+   - name: GigabitEthernet2
+     description: to_CSR-2_Gig1
+   - name: GigabitEthernet3
+     description: to_CSR-4_Gig1
 
