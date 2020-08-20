@@ -21,4 +21,4 @@
           - name: "{{ item.name }}"
             description: "{{ item.description }}"
       loop: "{{ interfaces[inventory_hostname] }}"
-      when: (ansible_host == "CSR_1")
+      when: (ansible_host == "CSR_2")
