@@ -1,0 +1,15 @@
+- hosts: CSR_Routers
+  become: yes
+  gather_facts: yes
+
+  tasks:          # this task was successful using the loop
+    - name: "Task 1 configure interfaces parameters on CSR-1"
+      debug:
+        msg: "{{ ansible_net_hostname }}"
+      when: ansible_net_hostname == "CSR_1"
+
+
+    - name: "Task 2 - configure interface parameters on CSR-2"
+      debug:
+        msg: "{{ ansible_net_hostname }}"
+      when: ansible_net_hostname == "CSR_2"
