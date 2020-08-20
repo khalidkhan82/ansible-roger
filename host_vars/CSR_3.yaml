@@ -1,4 +1,6 @@
 ---
+ansibe_become: yes
+ansible_become_password: "cisco"
 
 hostname:
   name: CSR-Three
