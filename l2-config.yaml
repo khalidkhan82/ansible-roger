@@ -12,7 +12,7 @@
         parents: interface {{ item.name }}
         lines:
           - description {{ item.description }}
-      when: hostname == "CSR_1"
+      when: inventory_hostname == "CSR_1"
       loop: "{{ interfaces }}" #list needs to be looped over
 
 
@@ -21,6 +21,6 @@
         config:
           - name: "{{ item.name }}"
             description: "{{ item.description }}"
-      when: ansible_hostname == "CSR_2"
+      when: inventory_hostname == "CSR_2"
       loop: "{{ interfaces[inventory_hostname] }}"
 
