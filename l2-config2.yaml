@@ -12,6 +12,4 @@
         config:
           - name: "{{ item.name }}"
             description: "{{ item.description }}"
-            duplex: "{{ intf_duplex }}"
-            mtu: "{{ intf_mtu }}"
       loop: "{{ interfaces[inventory_hostname] }}"
