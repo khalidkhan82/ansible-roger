@@ -15,7 +15,3 @@
             duplex: "{{ intf_duplex }}"
             mtu: "{{ intf_mtu }}"
       loop: "{{ interfaces[inventory_hostname] }}"
-
-    - name: "Save config"
-      ios_command:
-        commands: copy running-configuration startup-configuration

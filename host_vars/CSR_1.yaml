@@ -6,19 +6,3 @@ ansible_user: "admin2"
 
 hostnumber: 1
 
-
-interfaces:
-  - name: GigabitEthernet1
-    description: to_CSR-2_Gig1
-    ip: 10.50.50.1
-    mask: 255.255.255.0
-
-  - name: GigabitEthernet2
-    description: to_CSR-3_Gig1
-    ip: 10.60.60.1
-    mask: 255.255.255.0
-
-  - name: GigabitEthernet3
-    description: to_CSR-4_Gig1
-    ip: 10.70.70.1
-    mask: 255.255.255.0
