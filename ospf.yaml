@@ -1,0 +1,7 @@
+---
+- name: "This play configures OSPF"
+- hosts: CSR_Routers
+  become: yes
+
+  Tasks:
+    - name: "Task 1 - configure OSPF"

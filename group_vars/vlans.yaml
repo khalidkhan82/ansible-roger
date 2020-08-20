@@ -1,0 +1,9 @@
+vlans:
+  - name: Data
+    vlan_id: 10
+  - name: Voice
+    vlan_id: 20
+  - name: Web
+    vlan_id: 30
+  - name: IT
+    vlan_id: 40

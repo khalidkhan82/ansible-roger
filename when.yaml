@@ -13,3 +13,22 @@
       debug:
         msg: "{{ ansible_net_hostname }}"
       when: ansible_net_hostname == "CSR_2"
+
+
+      tasks:          # this task was successful using the loop
+        - name      : "Task 1 configure interfaces parameters on CSR-1"
+          ios_config:
+            parents: interface {{ item.name }}
+            lines  :
+              - description {{ item.description }}
+          loop      : "{{ interfaces }}" #list needs to be looped over
+          when      : ansible_net_hostname == "CSR_1"
+
+
+        - name          : "Task 2 - configure interface parameters on CSR-2"
+          ios_interfaces:
+            config:
+              - name       : "{{ item.name }}"
+                description: "{{ item.description }}"
+          loop          : "{{ interfaces[inventory_hostname] }}"
+          when          : ansible_net_hostname == "CSR_2"

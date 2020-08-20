@@ -7,9 +7,15 @@
   become: yes
 
   tasks:          # this task was successful using the loop
-    - name: "Task 2 - configure interface parameters on CSR-2"
+    - name: "Task 2 - configure interface parameters"
       ios_interfaces:
         config:
           - name: "{{ item.name }}"
             description: "{{ item.description }}"
+            duplex: "{{ intf.duplex }}"
+            mtu: "{{ intf.mtu }}"
       loop: "{{ interfaces[inventory_hostname] }}"
+
+    - name: "Save config"
+      ios_command:
+        commands: copy running-configuration startup-configuration

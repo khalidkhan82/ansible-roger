@@ -20,6 +20,13 @@ name_servers:
   - 10.10.10.10
 
 interfaces:
+ CSR_1:
+    - name       : GigabitEthernet1
+      description: to_CSR-2_Gig1
+    - name       : GigabitEthernet2
+      description: to_CSR-3_Gig1
+    - name       : GigabitEthernet3
+      description: to_CSR-4_Gig1
  CSR_2:
   - name: GigabitEthernet1
     description: to_CSR-1_Gig1
@@ -34,4 +41,13 @@ interfaces:
     description: to_CSR-2_Gig1
   - name: GigabitEthernet3
     description: to_CSR-4_Gig1
+ CSR_4:
+   - name: GigabitEthernet1
+     description: to_CSR-1_Gig1
+   - name: GigabitEthernet2
+     description: to_CSR-2_Gig1
+   - name: GigabitEthernet3
+     description: to_CSR-3_Gig1
 
+intf_duplex: full
+intf_mtu: 1500
