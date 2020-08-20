@@ -2,3 +2,9 @@
       #loop: "{{ interfaces[query('inventory_hostnames'), 'all'] }}"
       #loop: "{{ lookup('dict', interfaces) }}"
       with_dict: "{{ interfaces }}"
+
+          - name: "Task 2 - configure interface parameters on CSR-2"
+            ios_interfaces:
+              name: "{{ item.name }}"
+              description: "{{ item.description }}"
+            with_dict: "{{ interfaces }}"
