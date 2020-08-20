@@ -7,13 +7,13 @@
   become: yes
 
   tasks:          # this task was successful using the loop
-    - name: "Task 2 - configure interface parameters"
+    - name: "Task - configure interface parameters on all CSR Routers"
       ios_interfaces:
         config:
           - name: "{{ item.name }}"
             description: "{{ item.description }}"
-            duplex: "{{ intf.duplex }}"
-            mtu: "{{ intf.mtu }}"
+            duplex: "{{ intf_duplex }}"
+            mtu: "{{ intf_mtu }}"
       loop: "{{ interfaces[inventory_hostname] }}"
 
     - name: "Save config"
