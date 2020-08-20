@@ -8,17 +8,19 @@
 
   tasks:          # this task was successful using the loop
     - name: "Task 1 configure interfaces parameters on CSR-1"
+      when: inventory_hostname == "CSR_1"
       ios_config:
         parents: interface {{ item.name }}
         lines:
           - description {{ item.description }}
       loop: "{{ interfaces }}" #list needs to be looped over
-      when: inventory_hostname == "CSR_1"
+
 
     - name: "Task 2 - configure interface parameters on CSR-2"
+      when: inventory_hostname == "CSR_2"
       ios_interfaces:
         config:
           - name: "{{ item.name }}"
             description: "{{ item.description }}"
       loop: "{{ interfaces[inventory_hostname] }}"
-      when: inventory_hostname == "CSR_2"
+
