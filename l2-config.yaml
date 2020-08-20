@@ -13,7 +13,7 @@
         lines:
           - description {{ item.description }}
       loop: "{{ interfaces }}" #list needs to be looped over
-      when: (ansible_host == CSR-1)
+      when: (ansible_host == CSR_1)
 
     - name: "Task 2 - configure interface parameters on CSR-2"
       ios_interfaces:
@@ -21,4 +21,4 @@
           - name: "{{ item.name }}"
             description: "{{ item.description }}"
       loop: "{{ interfaces[inventory_hostname] }}"
-      when: (ansible_host == CSR-1)
+      when: (ansible_host == CSR_1)
