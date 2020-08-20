@@ -5,6 +5,7 @@
 
 - hosts: CSR_Routers
   become: yes
+  gather_facts: yes
 
   tasks:          # this task was successful using the loop
     - name: "Task 1 configure interfaces parameters on CSR-1"
@@ -12,7 +13,7 @@
         parents: interface {{ item.name }}
         lines:
           - description {{ item.description }}
-      when: inventory_hostname == "CSR_1"
+      when: ansible_host == "CSR_1"
       loop: "{{ interfaces }}" #list needs to be looped over
 
 
@@ -21,6 +22,6 @@
         config:
           - name: "{{ item.name }}"
             description: "{{ item.description }}"
-      when: inventory_hostname == "CSR_2"
+      when: ansible_host == "CSR_2"
       loop: "{{ interfaces[inventory_hostname] }}"
 
