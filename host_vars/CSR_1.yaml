@@ -4,5 +4,7 @@ ansible_user: "admin2"
 ansibe_become: yes
 ansible_become_password: "cisco"
 
+router_id: 1.1.1.1
+
 hostnumber: 1
 

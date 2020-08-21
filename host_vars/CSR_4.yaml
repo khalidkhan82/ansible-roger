@@ -2,6 +2,6 @@
 ansibe_become: yes
 ansible_become_password: "cisco"
 
-
+router_id: 4.4.4.4
 
 hostnumber: 4

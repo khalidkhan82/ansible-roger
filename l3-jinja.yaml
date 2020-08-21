@@ -1,0 +1,9 @@
+---
+- name: configure network devices
+  hosts: CSR_Routers
+  gather_facts: false
+
+  tasks:
+    - name: configure l3 using Jinja 2 template
+      cli_config:
+        config: "{{ lookup('template', './templates/l3-config.j2') }}"
