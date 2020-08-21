@@ -20,6 +20,6 @@
           - name: "{{ item.name}}"
             ipv4:
             - address: "{{ item.ipv4}}"
-      loop: "{{ l3_interfces[inventory_hostname] }}"
+      loop: "{{ l3_interfaces[inventory_hostname] }}"
       when: "'loopback' in the item.name"
       tags: loopback
