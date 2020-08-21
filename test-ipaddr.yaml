@@ -12,7 +12,7 @@
         ip6: True
         ip7: 42540766412265424405338506004571095040/64
 
-  Tasks:
+  tasks:
     - name: "Test ippadd filter"
       debug:
         msg: "{{ item | ipaddr }}"
