@@ -4,4 +4,4 @@ ansible_become_password: "cisco"
 
 
 
-hostnumber:4
+hostnumber: 4
