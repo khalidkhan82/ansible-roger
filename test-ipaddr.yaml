@@ -9,6 +9,6 @@
   tasks:
     - name: "Test ippadd filter"
       debug:
-        msg: "{{ my_list | ipv4('net') | ipv4(1) }}"
+        msg: "{{ my_list | ipv4('net') | ipv4(-1) }}"
 
 
