@@ -1,7 +1,7 @@
 ---
 
 - name: "This play test various options in ipaddr() Jinja2 filter for netaddr Python package"
-  hosts: all
+  hosts: localhost
   vars:
     - ips:
         ip1: 192.24.2.1
@@ -12,9 +12,9 @@
         ip6: True
         ip7: 42540766412265424405338506004571095040/64
 
-    Tasks:
-      - name: "Test ippadd filter"
-        debug:
-          msg: "{{ item | ipaddr }}"
-        loop: "{{ ips }}"
+  Tasks:
+    - name: "Test ippadd filter"
+      debug:
+        msg: "{{ item | ipaddr }}"
+      loop: "{{ ips }}"
 
