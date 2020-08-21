@@ -15,5 +15,5 @@
     - name: "Test ippadd filter"
       debug:
         msg: "{{ item | ipaddr }}"
-      loop: "{{ ips }}"
+      loop: "{{ vars }}"
 
