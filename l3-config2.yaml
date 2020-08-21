@@ -6,10 +6,20 @@
   become: yes
 
   tasks:          # this task was successful using the loop
-    - name: "Task 1 configure interfaces IPs"
+    - name: "Task 1 - configure interfaces IPs"
       ios_l3_interfaces:
         config:
           - name: "{{ item.name }}"
             ipv4:
             - address: "{{ item.ipv4 }}"
       loop: "{{ l3_interfaces[inventory_hostname] }}" #list needs to be looped over
+
+    - name: "Tasks 2 - configure loopback interfaces"
+      ios_l3_interfaces:
+        config:
+          - name: "{{ item.name}}"
+            ipv4:
+            - address: "{{ item.ipv4}}"
+      loop: "{{ l3_interfces[inventory_hostname] }}"
+      when: "'loopback' in the item.name"
+      tags: loopback

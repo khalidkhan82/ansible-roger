@@ -60,6 +60,8 @@ l3_interfaces:
     ipv4: 172.16.13.1/30
   - name: GigabitEthernet3
     ipv4: 172.16.14.1/30
+  - name: Loopback0
+    ipv4: "{{ loopback_prefix | ipv4(hst_router_id) | ipaddr('address') + '/32'}}"
  CSR-2:
   - name: GigabitEthernet1
     ipv4: 172.16.12.2/30
@@ -67,6 +69,8 @@ l3_interfaces:
     ipv4: 172.16.23.1/30
   - name: GigabitEthernet3
     ipv4: 172.16.24.1/30
+  - name: Loopback0
+    ipv4: "{{ loopback_prefix | ipv4(hst_router_id) | ipaddr('address') + '/32'}}"
  CSR-3:
   - name: GigabitEthernet1
     ipv4: 172.16.13.2/30
@@ -74,6 +78,8 @@ l3_interfaces:
     ipv4: 172.16.23.2/30
   - name: GigabitEthernet3
     ipv4: 172.16.34.1/30
+  - name: Loopback0
+    ipv4: "{{ loopback_prefix | ipv4(hst_router_id) | ipaddr('address') + '/32'}}"
  CSR-4:
   - name: GigabitEthernet1
     ipv4: 172.16.14.2/30
@@ -81,6 +87,8 @@ l3_interfaces:
     ipv4: 172.16.24.2/30
   - name: GigabitEthernet3
     ipv4: 172.16.34.2/30
+  - name: Loopback0
+    ipv4: "{{ loopback_prefix | ipv4(hst_router_id) | ipaddr('address') + '/32'}}"
 
 l3:
   CSR-1:
