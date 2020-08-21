@@ -5,5 +5,5 @@
 
   tasks:
     - name: configure l3 using Jinja 2 template
-      cli_config:
-        config: "{{ lookup('template', './templates/l3-config.j2') }}"
+      ios_config:
+        src: ./templates/l3-config.j2
