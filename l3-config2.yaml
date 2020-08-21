@@ -12,4 +12,4 @@
           - name: "{{ item.name }}"
             ipv4:
             - address: "{{ item.ipv4 }}"
-      loop: "{{ interfaces[inventory_hostname] }}" #list needs to be looped over
+      loop: "{{ l3_interfaces[inventory_hostname] }}" #list needs to be looped over
