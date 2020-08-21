@@ -1,4 +1,4 @@
 {% for interface,ip in l3[inventory_hostname].items() %}
   interface {{interface}}
-    ip address {{ip}} mask 255.255.255.0
+    ip address {{ip}} 255.255.255.255
 {% endfor %}
