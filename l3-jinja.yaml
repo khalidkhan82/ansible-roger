@@ -1,7 +1,7 @@
 ---
 - name: configure network devices
   hosts: CSR_Routers
-  gather_facts: false
+  become: yes
 
   tasks:
     - name: configure l3 using Jinja 2 template
