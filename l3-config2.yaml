@@ -17,7 +17,7 @@
     - name: "Tasks 2 - configure loopback interfaces"
       ios_l3_interfaces:
         config:
-          - name: "{{ item.name}}"
+          - name: "{{ item.name }}"
             ipv4:
             - address: "{{ item.ipv4 }}"
       loop: "{{ l3_interfaces[inventory_hostname] }}"
