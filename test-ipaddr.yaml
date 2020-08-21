@@ -4,11 +4,12 @@
   hosts: localhost
   vars:
     my_ip: "192.24.2.1"
+    router_id: 10
     my_list: ['192.24.2.1', 'host.fqdn', '::1', '192.168.32.0/24', 'fe80::100/10', True, '', '42540766412265424405338506004571095040/64']
 
   tasks:
     - name: "Test ippadd filter"
       debug:
-        msg: "{{ my_list | ipv4('net') | ipv4(-1) }}"
+        msg: "{{ my_list | ipv4('net') | ipv4(router_id) }}"
 
 
