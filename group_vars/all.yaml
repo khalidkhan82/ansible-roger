@@ -84,6 +84,6 @@ l3_interfaces:
 
 l3:
   CSR-1:
-      GigabitEthernet1: 172.16.1.1/30
-      GigabitEthernet2: 172.16.2.1/30
-      GigabitEthernet3: 172.16.3.1/30
+      GigabitEthernet1: 172.16.1.1
+      GigabitEthernet2: 172.16.2.1
+      GigabitEthernet3: 172.16.3.1
