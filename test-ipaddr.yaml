@@ -9,6 +9,6 @@
   tasks:
     - name: "Test ippadd filter"
       debug:
-        msg: "{{ my_list | ipaddr('net' }}"
+        msg: "{{ my_list | ipaddr('net') }}"
 
 
