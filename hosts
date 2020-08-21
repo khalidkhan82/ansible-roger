@@ -2,10 +2,10 @@
 
 [CSR_Routers]
 
-CSR_1 ansible_host=192.168.1.11
-CSR_2 ansible_host=192.168.1.12
-CSR_3 ansible_host=192.168.1.13
-CSR_4 ansible_host=192.168.1.14
+CSR-1 ansible_host=192.168.1.11
+CSR-2 ansible_host=192.168.1.12
+CSR-3 ansible_host=192.168.1.13
+CSR-4 ansible_host=192.168.1.14
 
 [NXOS]
 NXOS-1 ansible_host=192.168.1.21

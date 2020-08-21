@@ -2,6 +2,7 @@
 
 # Play 1 - this play configure Layer 2 interfaces parameters such as
 #description, MTU, state etc. on the CSR-Routers
+# Use this instead of l2-config.yaml
 
 - hosts: CSR_Routers
   become: yes

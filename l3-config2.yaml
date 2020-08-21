@@ -6,10 +6,10 @@
   become: yes
 
   tasks:          # this task was successful using the loop
-    - name: "Task 1 configure interfaces settings"
-      ios_config:
-        parents: interface {{ item.name }}
-        lines:
-          - ip address {{ item.ip }} {{ item.mask }}
-
-      loop: "{{ interfaces }}" #list needs to be looped over
+    - name: "Task 1 configure interfaces IPs"
+      ios_l3_interfaces:
+        config:
+          - name: "{{ item.name }}"
+            ipv4:
+            - address: "{{ item.ipv4 }}"
+      loop: "{{ interfaces[inventory_hostname] }}" #list needs to be looped over
