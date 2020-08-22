@@ -22,3 +22,12 @@
             - address: "{{ item.ipv4 }}"
       loop: "{{ l3_interfaces[inventory_hostname] }}"
       tags: loopback
+
+    - name: "Task 3 - bring up all the interfaces"
+      ios_interfaces:
+        config:
+          - name: "{{ item.name }}"
+            enabled: yes
+      loop: "{{ l3_interfaces[inventory_hostname] }}"
+
+
