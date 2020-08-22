@@ -8,3 +8,5 @@
     - name: Ansible Basic Variable Example
       debug:
         msg: "{{ greeting }}"
+
+

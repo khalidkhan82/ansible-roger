@@ -1,0 +1,10 @@
+---
+
+- name: "Play - save running-config"
+  hosts: CSR_Routers
+  become: yes
+
+  tasks:
+    - name: "Save the running-config using the Always option for 'save_when'"
+      ios_config:
+        save_when: always

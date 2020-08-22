@@ -8,3 +8,49 @@
               name: "{{ item.name }}"
               description: "{{ item.description }}"
             with_dict: "{{ interfaces }}"
+
+
+PLAY [CSR_Routers] *************************************************************
+
+TASK [Task 1 - configure interfaces IPs] ***************************************
+changed: [CSR-1] => (item={u'name': u'GigabitEthernet1', u'ipv4': u'172.16.12.1/30'})
+changed: [CSR-1] => (item={u'name': u'GigabitEthernet2', u'ipv4': u'172.16.13.1/30'})
+changed: [CSR-1] => (item={u'name': u'GigabitEthernet3', u'ipv4': u'172.16.14.1/30'})
+skipping: [CSR-1] => (item={u'name': u'Loopback0', u'ipv4': u'150.1.0.1/32'})
+changed: [CSR-2] => (item={u'name': u'GigabitEthernet1', u'ipv4': u'172.16.12.2/30'})
+changed: [CSR-2] => (item={u'name': u'GigabitEthernet2', u'ipv4': u'172.16.23.1/30'})
+changed: [CSR-2] => (item={u'name': u'GigabitEthernet3', u'ipv4': u'172.16.24.1/30'})
+skipping: [CSR-2] => (item={u'name': u'Loopback0', u'ipv4': u'150.1.0.2/32'})
+changed: [CSR-3] => (item={u'name': u'GigabitEthernet1', u'ipv4': u'172.16.13.2/30'})
+changed: [CSR-3] => (item={u'name': u'GigabitEthernet2', u'ipv4': u'172.16.23.2/30'})
+changed: [CSR-3] => (item={u'name': u'GigabitEthernet3', u'ipv4': u'172.16.34.1/30'})
+skipping: [CSR-3] => (item={u'name': u'Loopback0', u'ipv4': u'150.1.0.3/32'})
+changed: [CSR-4] => (item={u'name': u'GigabitEthernet1', u'ipv4': u'172.16.14.2/30'})
+changed: [CSR-4] => (item={u'name': u'GigabitEthernet2', u'ipv4': u'172.16.24.2/30'})
+changed: [CSR-4] => (item={u'name': u'GigabitEthernet3', u'ipv4': u'172.16.34.2/30'})
+skipping: [CSR-4] => (item={u'name': u'Loopback0', u'ipv4': u'150.1.0.4/32'})
+root@ubuntu:/home/github/ansible-roger# ansible-playbook l3-config2.yaml
+
+PLAY [CSR_Routers] *************************************************************
+
+TASK [Task 1 - configure interfaces IPs] ***************************************
+ok: [CSR-1] => (item={u'name': u'GigabitEthernet1', u'ipv4': u'172.16.12.1/30'})
+ok: [CSR-1] => (item={u'name': u'GigabitEthernet2', u'ipv4': u'172.16.13.1/30'})
+ok: [CSR-1] => (item={u'name': u'GigabitEthernet3', u'ipv4': u'172.16.14.1/30'})
+skipping: [CSR-1] => (item={u'name': u'Loopback0', u'ipv4': u'150.1.0.1/32'})
+ok: [CSR-2] => (item={u'name': u'GigabitEthernet1', u'ipv4': u'172.16.12.2/30'})
+ok: [CSR-2] => (item={u'name': u'GigabitEthernet2', u'ipv4': u'172.16.23.1/30'})
+ok: [CSR-2] => (item={u'name': u'GigabitEthernet3', u'ipv4': u'172.16.24.1/30'})
+skipping: [CSR-2] => (item={u'name': u'Loopback0', u'ipv4': u'150.1.0.2/32'})
+ok: [CSR-3] => (item={u'name': u'GigabitEthernet1', u'ipv4': u'172.16.13.2/30'})
+ok: [CSR-3] => (item={u'name': u'GigabitEthernet2', u'ipv4': u'172.16.23.2/30'})
+ok: [CSR-3] => (item={u'name': u'GigabitEthernet3', u'ipv4': u'172.16.34.1/30'})
+skipping: [CSR-3] => (item={u'name': u'Loopback0', u'ipv4': u'150.1.0.3/32'})
+ok: [CSR-4] => (item={u'name': u'GigabitEthernet1', u'ipv4': u'172.16.14.2/30'})
+ok: [CSR-4] => (item={u'name': u'GigabitEthernet2', u'ipv4': u'172.16.24.2/30'})
+ok: [CSR-4] => (item={u'name': u'GigabitEthernet3', u'ipv4': u'172.16.34.2/30'})
+skipping: [CSR-4] => (item={u'name': u'Loopback0', u'ipv4': u'150.1.0.4/32'})
+
+TASK [Task 3 - bring up all the interfaces] ************************************
+ok: [CSR-1] => (item={u'name': u'GigabitEthernet1', u'ipv4': u'172.16.12.1/30'})
+ok: [CSR-1] => (item={u'name': u'GigabitEthe
