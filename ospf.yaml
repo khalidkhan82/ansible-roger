@@ -4,4 +4,15 @@
   become: yes
 
   Tasks:
-    - name: "Task 1 - configure OSPF"
+    - name: "Task 1 - configure router-id"
+      ios_config:
+        lines:
+          - router-id {{ loopback_prefix | ipv4(hst_router_id) | ipv4('address')
+
+    - name: "Task 2 - configure OSPF active links"
+      ios_config:
+        lines:
+          - ip ospf {{ ospf_process }} area {{ ospf_area }}
+          - ip ospf network point-to-point
+          - ip ospf cost {{item.ospf_metric | default(ospf_metric)}}
+      loop: "{{ l3_interfaces[inventory_hostname] | selectattr('ospf') | list }}"

@@ -12,8 +12,8 @@
           - name: "{{ item.name }}"
             ipv4:
             - address: "{{ item.ipv4 }}"
-      loop: "{{ l3_interfaces[inventory_hostname] }}" #list needs to be looped over
-      when: "'Loopback' not in item.name"
+      loop: "{{ l3_interfaces[inventory_hostname] | selectattr('name','contains','Ethernet') | list }}" #list needs to be looped over
+      #when: "'Loopback' not in item.name"
 
     - name: "Task 3 - bring up all the interfaces"
       ios_interfaces:
@@ -28,9 +28,12 @@
           - name: "{{ item.name }}"
             ipv4:
             - address: "{{ item.ipv4 }}"
-      loop: "{{ l3_interfaces[inventory_hostname] }}"
-      when: "'Loopback' in item.name"
+      loop: "{{ l3_interfaces[inventory_hostname] | selectattr('name','contains','Loopback') | list }}"
+      #when: "'Loopback' in item.name"
       tags: loopback
 
+    - name: "Save the running-config using the Always option for 'save_when'"
+      ios_config:
+        save_when: always
 
 

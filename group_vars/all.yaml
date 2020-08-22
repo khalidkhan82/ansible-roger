@@ -19,6 +19,11 @@ name_servers:
   - 9.9.9.9
   - 10.10.10.10
 
+#Layer 2 settings
+
+intf_duplex: full
+intf_mtu: 1500
+
 interfaces:
  CSR-1:
   - name: GigabitEthernet1
@@ -49,51 +54,63 @@ interfaces:
   - name: GigabitEthernet3
     description: to_CSR-3_Gig1
 
-intf_duplex: full
-intf_mtu: 1500
 
+
+#Layer 3 settings
 loopback_prefix: 150.1.0.0/24
 
 l3_interfaces:
  CSR-1:
   - name: GigabitEthernet1
     ipv4: 172.16.12.1/30
+    ospf: yes
   - name: GigabitEthernet2
     ipv4: 172.16.13.1/30
+    ospf: passive
   - name: GigabitEthernet3
     ipv4: 172.16.14.1/30
+    ospf: yes
   - name: Loopback0
     ipv4: "{{ loopback_prefix | ipv4(hst_router_id) | ipaddr('address') + '/32'}}"
  CSR-2:
   - name: GigabitEthernet1
     ipv4: 172.16.12.2/30
+    ospf: yes
   - name: GigabitEthernet2
     ipv4: 172.16.23.1/30
+    ospf: passive
   - name: GigabitEthernet3
     ipv4: 172.16.24.1/30
+    ospf: yes
   - name: Loopback0
     ipv4: "{{ loopback_prefix | ipv4(hst_router_id) | ipaddr('address') + '/32'}}"
  CSR-3:
   - name: GigabitEthernet1
     ipv4: 172.16.13.2/30
+    ospf: yes
   - name: GigabitEthernet2
     ipv4: 172.16.23.2/30
+    ospf: passive
   - name: GigabitEthernet3
     ipv4: 172.16.34.1/30
+    ospf: yes
   - name: Loopback0
     ipv4: "{{ loopback_prefix | ipv4(hst_router_id) | ipaddr('address') + '/32'}}"
  CSR-4:
   - name: GigabitEthernet1
     ipv4: 172.16.14.2/30
+    ospf: yes
   - name: GigabitEthernet2
     ipv4: 172.16.24.2/30
+    ospf: yes
   - name: GigabitEthernet3
     ipv4: 172.16.34.2/30
+    ospf: yes
   - name: Loopback0
     ipv4: "{{ loopback_prefix | ipv4(hst_router_id) | ipaddr('address') + '/32'}}"
 
-l3:
-  CSR-1:
-      GigabitEthernet1: 172.16.1.1
-      GigabitEthernet2: 172.16.2.1
-      GigabitEthernet3: 172.16.3.1
+
+#OSPF parameters
+ospf_process: 10
+ospf_area: 0
+ospf_metric: 10
