@@ -15,6 +15,13 @@
       loop: "{{ l3_interfaces[inventory_hostname] }}" #list needs to be looped over
       when: "'Loopback' not in item.name"
 
+    - name: "Task 3 - bring up all the interfaces"
+      ios_interfaces:
+        config:
+          - name: "{{ item.name }}"
+            enabled: yes
+      loop: "{{ l3_interfaces[inventory_hostname] }}"
+
     - name: "Tasks 2 - configure loopback interfaces"
       ios_l3_interfaces:
         config:
@@ -25,11 +32,5 @@
       when: "'Loopback' in item.name"
       tags: loopback
 
-    - name: "Task 3 - bring up all the interfaces"
-      ios_interfaces:
-        config:
-          - name: "{{ item.name }}"
-            enabled: yes
-      loop: "{{ l3_interfaces[inventory_hostname] }}"
 
 
