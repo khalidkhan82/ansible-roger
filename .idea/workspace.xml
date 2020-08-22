@@ -22,6 +22,7 @@
     <list default="true" id="68da2cf9-a190-4a28-b297-16fa5ed1373e" name="Default Changelist" comment="created configure1.yaml, config1.txt and configs directory">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/l3-config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/draft_files/l3-config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/l3-config2.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/l3-config2.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-ipaddr.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/draft_files/test-ipaddr.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/when.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/draft_files/when.yaml" afterDir="false" />
     </list>

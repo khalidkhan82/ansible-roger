@@ -13,6 +13,7 @@
             ipv4:
             - address: "{{ item.ipv4 }}"
       loop: "{{ l3_interfaces[inventory_hostname] }}" #list needs to be looped over
+      when: "'Loopback' not in item.name"
 
     - name: "Tasks 2 - configure loopback interfaces"
       ios_l3_interfaces:
@@ -21,6 +22,7 @@
             ipv4:
             - address: "{{ item.ipv4 }}"
       loop: "{{ l3_interfaces[inventory_hostname] }}"
+      when: "'Loopback' in item.name"
       tags: loopback
 
     - name: "Task 3 - bring up all the interfaces"
