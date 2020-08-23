@@ -25,3 +25,4 @@
           lines:
             - passive interface {{ item.name }}
         loop: "{{ l3_interfaces[inventory_hostname] | selectattr('ospf','equalto','passive') | list }}"
+        tags: passive
