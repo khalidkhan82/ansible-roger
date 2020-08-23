@@ -11,8 +11,16 @@
 
     - name: "Task 2 - configure OSPF active links"
       ios_config:
+        parents: interface {{ item.name }}
         lines:
           - ip ospf {{ ospf_process }} area {{ ospf_area }}
           - ip ospf network point-to-point
           - ip ospf cost {{item.ospf_metric | default(ospf_metric)}}
       loop: "{{ l3_interfaces[inventory_hostname] | selectattr('ospf') | list }}"
+
+    - name: "Task 2 - configure OSPF passive links"
+      ios_config:
+        parents: router ospf {{ ospf_process }}
+        lines:
+          - passive interface {{ item.name }}
+      loop: "{{ l3_interfaces[inventory_hostname] | selectattr('ospf','equalto','passive') | list }}"
