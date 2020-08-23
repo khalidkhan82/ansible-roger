@@ -1,6 +1,6 @@
 ---
   - name: "This play configures OSPF"
-  - hosts: CSR_Routers
+    hosts: CSR_Routers
     become: yes
 
     tasks:
