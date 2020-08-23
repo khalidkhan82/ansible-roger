@@ -17,7 +17,7 @@
             - ip ospf {{ ospf_process }} area {{ ospf_area }}
             - ip ospf network point-to-point
             - ip ospf cost {{item.ospf_metric | default(ospf_metric)}}
-        loop: "{{ l3_interfaces[inventory_hostname] | selectattr('ospf') }}"
+        loop: "{{ l3_interfaces[inventory_hostname] | selectattr('ospf') | list }}"
 
       - name: "Task 3 - configure OSPF passive links"
         ios_config:
