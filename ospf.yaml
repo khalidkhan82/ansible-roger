@@ -19,7 +19,7 @@
             - ip ospf cost {{item.ospf_metric | default(ospf_metric)}}
         loop: "{{ l3_interfaces[inventory_hostname] | selectattr('ospf') | list }}"
 
-      - name: "Task 2 - configure OSPF passive links"
+      - name: "Task 3 - configure OSPF passive links"
         ios_config:
           parents: router ospf {{ ospf_process }}
           lines:
