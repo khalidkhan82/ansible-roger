@@ -6,6 +6,7 @@
     tasks:
       - name: "Task 1 - configure router-id"
         ios_config:
+          parents: router ospf {{ ospf_process }}
           lines:
             - router-id {{ loopback_prefix | ipv4(hst_router_id) | ipv4('address') }}
 
