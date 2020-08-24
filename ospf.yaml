@@ -17,7 +17,7 @@
             - ip ospf {{ ospf_process }} area {{ ospf_area }}
             - ip ospf network point-to-point
             - ip ospf cost {{ ospf_metric | default(ospf_metric) }}
-        loop: "{{ l3_interfaces[inventory_hostname] | selectattr('ospf', 'equalto', 'active')| list }}"
+        loop: "{{ l3_interfaces[inventory_hostname] | selectattr('ipv4', 'contains', '172.16')| list }}"
         #loop: "{{ l3_interfaces[inventory_hostname] }}"
         #when: "'yes' in item.ospf"
 
