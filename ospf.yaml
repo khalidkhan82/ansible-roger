@@ -20,6 +20,7 @@
         loop: "{{ l3_interfaces[inventory_hostname] | selectattr('routing', 'contains', 'ospf')| list }}"
         #loop: "{{ l3_interfaces[inventory_hostname] }}"
         #when: "'yes' in item.ospf"
+        tags: active
 
       - name: 'Task 3 - configure OSPF passive links'
         ios_config:

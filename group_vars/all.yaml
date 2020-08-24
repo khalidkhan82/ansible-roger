@@ -111,7 +111,7 @@ l3_interfaces:
     routing: ospf
   - name: Loopback0
     ipv4: "{{ loopback_prefix | ipv4(hst_router_id) | ipaddr('address') + '/32'}}"
-    routing:
+    routing: passive
 
 
 #OSPF parameters
