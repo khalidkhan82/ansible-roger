@@ -72,6 +72,7 @@ l3_interfaces:
     routing: ospf
   - name: Loopback0
     ipv4: "{{ loopback_prefix | ipv4(hst_router_id) | ipaddr('address') + '/32'}}"
+    routing: passive
  CSR-2:
   - name: GigabitEthernet1
     ipv4: 172.16.12.2/30
@@ -84,6 +85,7 @@ l3_interfaces:
     routing: ospf
   - name: Loopback0
     ipv4: "{{ loopback_prefix | ipv4(hst_router_id) | ipaddr('address') + '/32'}}"
+    routing: passive
  CSR-3:
   - name: GigabitEthernet1
     ipv4: 172.16.13.2/30
@@ -96,6 +98,7 @@ l3_interfaces:
     routing: ospf
   - name: Loopback0
     ipv4: "{{ loopback_prefix | ipv4(hst_router_id) | ipaddr('address') + '/32'}}"
+    routing: passive
  CSR-4:
   - name: GigabitEthernet1
     ipv4: 172.16.14.2/30
@@ -108,6 +111,7 @@ l3_interfaces:
     routing: ospf
   - name: Loopback0
     ipv4: "{{ loopback_prefix | ipv4(hst_router_id) | ipaddr('address') + '/32'}}"
+    routing:
 
 
 #OSPF parameters
