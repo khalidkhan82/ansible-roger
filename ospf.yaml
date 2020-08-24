@@ -17,7 +17,7 @@
             - ip ospf {{ ospf_process }} area {{ ospf_area }}
             - ip ospf network point-to-point
             - ip ospf cost {{ ospf_metric | default(ospf_metric) }}
-        loop: "{{ l3_interfaces[inventory_hostname] | selectattr('routing', 'contains', 'ospf', 'defined')| list }}"
+        loop: "{{ l3_interfaces[inventory_hostname] | selectattr('routing', 'contains', 'ospf') | selectattr('defined') | list }}"
         #loop: "{{ l3_interfaces[inventory_hostname] }}"
         #when: "'yes' in item.ospf"
         tags: active
@@ -27,7 +27,7 @@
           parents: router ospf {{ ospf_process }}
           lines:
             - passive-interface {{ item.name }}
-        loop: "{{ l3_interfaces[inventory_hostname] | selectattr('routing', 'contains', 'passive', 'defined')| list }}"
+        loop: "{{ l3_interfaces[inventory_hostname] | selectattr('routing', 'contains', 'passive') | selectattr('defined') | list }}"
         #loop: "{{ l3_interfaces[inventory_hostname] }}"
         #when: "'passive' in item.ospf"
         tags: passive
