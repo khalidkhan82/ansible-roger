@@ -4,13 +4,13 @@
     become: yes
 
     tasks:
-      - name: "Task 1 - configure router-id"
+      - name: 'Task 1 - configure router-id'
         ios_config:
           parents: router ospf {{ ospf_process }}
           lines:
             - router-id {{ loopback_prefix | ipv4(hst_router_id) | ipv4('address') }}
 
-      - name: "Task 2 - configure OSPF active links"
+      - name: 'Task 2 - configure OSPF active links'
         ios_config:
           parents: interface {{ item.name }}
           lines:
@@ -18,15 +18,15 @@
             - ip ospf network point-to-point
             - ip ospf cost {{ ospf_metric | default(ospf_metric) }}
         #loop: "{{ l3_interfaces[inventory_hostname] | selectattr('ospf', 'equalto', 'yes')| list }}"
-        loop: "{{ l3_interfaces[inventory_hostname]
+        loop: "{{ l3_interfaces[inventory_hostname]"
         when: "'yes' in item.ospf"
 
-      - name: "Task 3 - configure OSPF passive links"
+      - name: 'Task 3 - configure OSPF passive links'
         ios_config:
           parents: router ospf {{ ospf_process }}
           lines:
             - passive interface {{ item.name }}
         #loop: "{{ l3_interfaces[inventory_hostname] | selectattr('ospf', 'equalto', 'passive')| list }}"
-        loop: "{{ l3_interfaces[inventory_hostname]
+        loop: "{{ l3_interfaces[inventory_hostname]"
         when: "'passive' in item.ospf"
         tags: passive

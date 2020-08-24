@@ -6,7 +6,7 @@
   become: yes
 
   tasks:          # this task was successful using the loop
-    - name: "Task 1 - configure interfaces IPs"
+    - name: 'Task 1 - configure interfaces IPs'
       ios_l3_interfaces:
         config:
           - name: "{{ item.name }}"
@@ -15,14 +15,14 @@
       loop: "{{ l3_interfaces[inventory_hostname] | selectattr('name','contains','Ethernet') | list }}" #list needs to be looped over
       #when: "'Loopback' not in item.name"
 
-    - name: "Task 3 - bring up all the interfaces"
+    - name: 'Task 3 - bring up all the interfaces'
       ios_interfaces:
         config:
           - name: "{{ item.name }}"
             enabled: yes
       loop: "{{ l3_interfaces[inventory_hostname] }}"
 
-    - name: "Tasks 2 - configure loopback interfaces"
+    - name: 'Tasks 2 - configure loopback interfaces'
       ios_l3_interfaces:
         config:
           - name: "{{ item.name }}"
