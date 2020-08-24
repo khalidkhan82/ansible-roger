@@ -18,7 +18,7 @@
             - ip ospf network point-to-point
             - ip ospf cost {{ ospf_metric | default(ospf_metric) }}
         #loop: "{{ l3_interfaces[inventory_hostname] | selectattr('ospf', 'equalto', 'yes')| list }}"
-        loop: "{{ l3_interfaces[inventory_hostname]"
+        loop: "{{ l3_interfaces[inventory_hostname] }}"
         when: "'yes' in item.ospf"
 
       - name: 'Task 3 - configure OSPF passive links'
@@ -27,6 +27,6 @@
           lines:
             - passive interface {{ item.name }}
         #loop: "{{ l3_interfaces[inventory_hostname] | selectattr('ospf', 'equalto', 'passive')| list }}"
-        loop: "{{ l3_interfaces[inventory_hostname]"
+        loop: "{{ l3_interfaces[inventory_hostname] }}"
         when: "'passive' in item.ospf"
         tags: passive
